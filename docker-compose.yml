@@ -1,0 +1,14 @@
+nginx:
+    build: nginx
+    ports:
+        - "8000:80"
+    links:
+        - server1
+        - server2
+
+server1:
+    build: server1
+
+server2:
+    build: server2
+
